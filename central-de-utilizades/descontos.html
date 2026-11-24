@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Descontos - Central de Utilidades</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="conteudo">
+            <h1>Central de Utilidades</h1>
+            <p>Calculadora de Descontos</p>
+        </div>
+    </header>
+
+    <nav class="navegacao">
+        <ul class="menu conteudo">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="descontos.html" class="ativo">Descontos</a></li>
+            <li><a href="parcelas.html">Parcelas</a></li>
+            <li><a href="investimentos.html">Investimentos</a></li>
+            <li><a href="despesas.html">Divisor de Despesas</a></li>
+        </ul>
+    </nav>
+
+    <main class="conteudo principal">
+        <section class="container-ferramenta">
+            <article class="cartao">
+                <h2>Calculadora de Descontos</h2>
+                <p class="descricao">
+                    Calcule o valor final de um produto e quanto você economizou após aplicar um percentual de desconto.
+                </p>
+
+                <form class="formulario-esboco">
+                    <fieldset>
+                        <legend>Dados do produto</legend>
+
+                        <div class="campo">
+                            <label for="preco-original">Preço original (R$):</label>
+                            <input type="number" id="preco-original" name="precoOriginal" placeholder="Ex.: 250,00" min="0" disabled>
+                        </div>
+
+                        <div class="campo">
+                            <label for="percentual-desconto">Percentual de desconto (%):</label>
+                            <input type="number" id="percentual-desconto" name="percentualDesconto" placeholder="Ex.: 15" min="0" max="100" disabled>
+                        </div>
+                    </fieldset>
+
+                    <button type="button" class="botao" onclick="executarCalculadoraDescontos()">
+                        Calcular desconto
+                    </button>
+                </form>
+
+                <div class="resultado">
+                    <h3>Resultado</h3>
+                    <p id="resultado-descontos">Aguardando execução da ferramenta.</p>
+                </div>
+
+                <a href="index.html" class="link-voltar">Voltar para a Central de Utilidades</a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="conteudo">
+            <p>&copy; 2026 Central de Utilidades &mdash; Projeto Incremental (Etapa 1)</p>
+        </div>
+    </footer>
+</body>
+</html>
